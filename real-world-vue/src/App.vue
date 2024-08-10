@@ -1,32 +1,41 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+// import HelloWorld from './components/HelloWorld.vue'
+</script>
+
 <template>
-  <div id="layout">
-    <header>
-      <div class="wrapper">
-        <nav>
-          <RouterLink to="/">Events</RouterLink> |
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <RouterView />
-    </main>
-  </div>
+<div id="layout">
+  <header>
+    <div class="wrapper">
+      <nav>
+        <RouterLink :to=" { name: 'home'}">Events</RouterLink> |
+        <RouterLink :to=" { name: 'about'}">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+  <RouterView />
+</div>
 </template>
 
-<style scoped>
+<style>
 #layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+font-family: Avenir, Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-align: center;
+color: #2c3e50;
 }
-
 nav {
-  text-align: center;
+padding: 30px;
 }
-
-main {
-  flex: 1;
-  padding: 1rem;
+nav a {
+font-weight: bold;
+color: #2c3e50;
+}
+nav a.router-link-exact-active {
+color: #42b983;
+}
+h2 {
+font-size: 20px;
 }
 </style>

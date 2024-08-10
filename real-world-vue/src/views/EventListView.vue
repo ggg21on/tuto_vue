@@ -18,19 +18,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container">
-    <h1>Events For Good</h1>
-    <div class="events">
-      <EventCard v-for="event in events" :key="event.id" :event="event" />
-    </div>
+  <h1>Events For Good</h1>
+  <div class="events">
+    <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <style scoped>
-.container {
-  text-align: center; 
-}
-
 .events {
   display: flex;
   flex-direction: column;
